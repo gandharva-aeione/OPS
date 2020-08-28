@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="none" configfailurepolicy="continue" thread-count="5">
+
+    <parameter name="shareReportToGoogleDrive" value="false"></parameter>
+    <parameter name="isParallel" value="false"></parameter>
+
+
+    <listeners>
+        <listener class-name="com.aeione.ops.generic.TestListener"></listener>
+    </listeners>
+
+    <test  enabled="true" verbose="100" preserve-order="true" name="test-chrome">
+
+        <parameter name="testBrowserName" value="Chrome"></parameter>
+        <parameter name="reportName" value="Chrome-ExtentReport"></parameter>
+        <parameter name="replaceExistingReport" value="true"></parameter>
+
+        <classes>
+            <!--<class name="com.aeione.ops.test.RegistrationPageTest"></class>
+            <class name="com.aeione.ops.test.LoginPageTest"></class>
+            <class name="com.aeione.ops.test.HomePageTest"></class>
+            <class name="com.aeione.ops.test.PostWIthHashTagTest"></class>
+            <class name="com.aeione.ops.test.PostCardTest"></class>
+            <class name="com.aeione.ops.test.ProfilePageTest"></class>
+            <class name="com.aeione.ops.test.ProfileCompletionPageTest"></class>
+            <class name="com.aeione.ops.test.NotificationTest"></class>
+            <class name="com.aeione.ops.test.WalletPageTest"></class>
+            <class name="com.aeione.ops.test.BookmarkPageTest"></class>
+            <class name="com.aeione.ops.test.InvitePageTest"></class>
+            <class name="com.aeione.ops.test.OrganizationPageTest"></class>
+            <class name="com.aeione.ops.test.SettingsPageTest"></class>
+            <class name="com.aeione.ops.test.CommunityPageTest"></class>
+            <class name="com.aeione.ops.test.ExplorePageTest"></class>
+            <class name="com.aeione.ops.test.BoostConsolePageTest"></class>
+            <class name="com.aeione.ops.test.EventPageTest"></class>-->
+            
+            <class name="com.aeione.ops.test.TestAccount"></class>
+
+        </classes>
+
+
+    </test>
+
+
+    <test enabled="false" verbose="100" preserve-order="true" name="test-firefox">
+
+        <parameter name="testBrowserName" value="Firefox"></parameter>
+        <parameter name="reportName" value="Firefox-ExtentReport"></parameter>
+        <parameter name="replaceExistingReport" value="true"></parameter>
+
+        <classes>
+          <!--  <class name="com.aeione.ops.test.RegistrationPageTest"></class>
+            <class name="com.aeione.ops.test.LoginPageTest"></class>
+            <class name="com.aeione.ops.test.HomePageTest"></class>
+            <class name="com.aeione.ops.test.PostWIthHashTagTest"></class>
+            <class name="com.aeione.ops.test.PostCardTest"></class>
+            <class name="com.aeione.ops.test.ProfilePageTest"></class>
+            <class name="com.aeione.ops.test.ProfileCompletionPageTest"></class>
+            <class name="com.aeione.ops.test.NotificationTest"></class>
+            <class name="com.aeione.ops.test.WalletPageTest"></class>
+            <class name="com.aeione.ops.test.BookmarkPageTest"></class>
+            <class name="com.aeione.ops.test.InvitePageTest"></class>
+            <class name="com.aeione.ops.test.OrganizationPageTest"></class>
+            <class name="com.aeione.ops.test.SettingsPageTest"></class>
+            <class name="com.aeione.ops.test.CommunityPageTest"></class>
+            <class name="com.aeione.ops.test.ExplorePageTest"></class>
+            <class name="com.aeione.ops.test.BoostConsolePageTest"></class>
+            <class name="com.aeione.ops.test.EventPageTest"></class>-->
+
+        </classes>
+
+
+    </test>
+
+
+    <test enabled="false" verbose="100" preserve-order="true" name="test-safari">
+
+        <parameter name="testBrowserName" value="Safari"></parameter>
+        <parameter name="reportName" value="Safari-ExtentReport"></parameter>
+        <parameter name="replaceExistingReport" value="true"></parameter>
+
+        <classes>
+            <class name="com.aeione.ops.test.RegistrationPageTest"></class>
+            <class name="com.aeione.ops.test.LoginPageTest"></class>
+        </classes>
+    </test>
+
+
+
+</suite>
